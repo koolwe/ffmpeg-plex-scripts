@@ -38,4 +38,4 @@ Usage (without '):
 1. A mini script to recursively search folders for a certain file type. Edit the script to change that from *.mkv to any supported video format.
 2. The script uses ffprobe to find errors in the file.
 3. If errors are found it'll run ffmpeg to re-convert & fix that file. It than saves the file in the same folder with -fixed.mkv name.
-4. After that it appends the filename with path to file-completed.log and then deletes the original file.
+4. After that it appends the fixed original filenames with path to files-fixed.log.
