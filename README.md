@@ -23,7 +23,7 @@ run 'sudo apt-get install ffmpeg' to install
 
 Usage (without '):
 
-'sudo chmod u+x fixVID'
+'sudo chmod u+x ./fixVID'
 
 'sudo ./fixVID'
 
