@@ -17,7 +17,7 @@ This helps plex to identify the videos and download relevant metadata. Edit the 
 I was trying to find a script which would recursively find errors in my media files on my plex server and fix them. But nothing, so i wrote my own mini script. Feel free to use and modify.
 
 Why i need such a script?
-Because my TV would crash playing these files sometimes
+Because sometimes my TV would crash playing these files 
 
 Tested on Ubuntu 16.04
 
