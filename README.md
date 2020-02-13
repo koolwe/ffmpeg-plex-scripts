@@ -2,9 +2,9 @@
 
 All scripts are modified to maintain quality
 
-AC3toAAC.sh converts AC3 audio to AAC. Edit it to change extension of files you want to process. Does not run recursively.
-EAC3toAC3.sh converts EAC3 audio to AAC. Edit it to change extension of files you want to process. Does not run recursively.
-mkvFIXtitle.sh Fixes Metadata for videos in a folder. Edit to change extension of files you want to process.
+AC3toAAC.sh converts AC3 audio to AAC. Edit the script to change extension of files you want to process. Does not run recursively.
+EAC3toAC3.sh converts EAC3 audio to AAC. Edit the script to change extension of files you want to process. Does not run recursively.
+mkvFIXtitle.sh Fixes Metadata by copying Filename to Metadata Title for videos in a folder. This helps plex to identify the videos and download relevant metadata. Edit the script to change extension of files you want to process.
 
 [fixVID]
 
