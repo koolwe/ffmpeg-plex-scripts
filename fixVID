@@ -7,17 +7,14 @@ RED='\033[0;31m'
 NC='\033[0m' # No Color
 
 for f in $(find . -name '*.mkv');
-do echo "Processing File $f";
-if [[ $(ffprobe -v error "$f") ]]; then
-	echo  ""
-    else
-	printf "${RED}Errors Found...in '$f' ${NC}\n"
-	printf "${RED}Parsing to ffmpeg...${NC}\n"
-	ffmpeg -y -i "$f" -c copy -crf 0 -map 0 "${f%.*}-FIXED.mkv" 
-	printf "${RED}Deleting... '$f' ${NC}\n"
-	echo "$f" >> files-completed.log
-	rm -rf "$f"
+do if [[ $(ffprobe -v error "$f" 2>&1 | grep -E '[[:alnum:]]+') ]]; then
+
+        printf "${RED}Errors Found...in '$f' ${NC}\n"
+        printf "${RED}Parsing to ffmpeg...${NC}\n"
+        ffmpeg -y -i "$f" -c copy -crf 0 -map 0 "${f%.*}-FIXED.mkv"
+        echo "$f" >> files-fixed.log
+   else
+        echo "${NC} $f File Ok"
 fi
 done
 unset IFS
-
