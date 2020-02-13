@@ -22,7 +22,9 @@ ffmpeg including ffprobe
 run 'sudo apt-get install ffmpeg' to install
 
 Usage (without '):
+
 'sudo chmod u+x fixVID'
+
 'sudo ./fixVID'
 
 1. A mini script to recursively search folders for a certain file type. Edit the script to change that from *.mkv to any supported video format.
