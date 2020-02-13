@@ -28,11 +28,9 @@ ffmpeg including ffprobe
 run 'sudo apt-get install ffmpeg' to install
 
 To run in the background:
-
 'sudo nohup ./fixVID &'
 
 Usage (without '):
-
 'sudo chmod u+x ./fixVID'
 
 'sudo ./fixVID'
