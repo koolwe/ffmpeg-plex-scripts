@@ -1,6 +1,6 @@
 # ffmpeg-plex-scripts
 
-All scripts are modified to maintain quality
+All scripts are charged to maintain quality of videos i.e. by using '-crf 0' flag
 
 AC3toAAC.sh converts AC3 audio to AAC. Edit the script to change extension of files you want to process. Does not run recursively.
 EAC3toAC3.sh converts EAC3 audio to AAC. Edit the script to change extension of files you want to process. Does not run recursively.
