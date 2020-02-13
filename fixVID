@@ -1,0 +1,22 @@
+#!/bin/bash
+IFS=$'\n'
+
+#    .---------- constant part!
+#    vvvv vvvv-- the code from above
+RED='\033[0;31m'
+NC='\033[0m' # No Color
+
+for f in $(find . -name '*.mkv');
+do echo "Processing File $f";
+if [[ $(ffprobe -v error "$f") ]]; then
+	echo  ""
+    else
+	printf "${RED}Errors Found...in '$f' ${NC}\n"
+	printf "${RED}Parsing to ffmpeg...${NC}\n"
+	ffmpeg -y -i "$f" -c copy "${f%.*}-FIXED.mkv" -crf 0
+	printf "${RED}Deleting... '$f' ${NC}\n"
+	rm -rf "$f"
+fi
+done
+unset IFS
+
