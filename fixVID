@@ -15,6 +15,7 @@ if [[ $(ffprobe -v error "$f") ]]; then
 	printf "${RED}Parsing to ffmpeg...${NC}\n"
 	ffmpeg -y -i "$f" -c copy "${f%.*}-FIXED.mkv" -crf 0
 	printf "${RED}Deleting... '$f' ${NC}\n"
+	echo "$f" >> files-completed.log
 	rm -rf "$f"
 fi
 done
