@@ -1,4 +1,6 @@
 # ffmpeg-plex-scripts
+Video Conversion Scripts
+Video Fixing Scripts
 
 All scripts are charged to maintain quality of videos i.e. by using '-crf 0' flag
 
